@@ -11,4 +11,10 @@ jobs:
       run: |
         echo "another hello world!"
         echo "another hello world x 2!"
-        
+
+  build-on-windows:
+    runs-on: windows-latest
+    needs: build_on_linux
+    steps:
+    - name: echo somethign
+      run: echo "hello world from windows"
